@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.AffichageEventsBackController">
+   <children>
+      <BorderPane prefHeight="554.0" prefWidth="1216.0">
+         <center>
+            <Pane fx:id="pnlOverview1" prefHeight="554.0" prefWidth="1218.0" styleClass="linear-grad" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField layoutX="1005.0" layoutY="33.0" prefHeight="27.0" prefWidth="183.0" promptText="Chercher" styleClass="textfield" stylesheets="@../css/fullpackstyling.css" />
+                  <Label layoutX="132.0" layoutY="22.0" text="Ajouter vos Événements !" textFill="#e7e5e5">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="1161.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+                  <BorderPane layoutX="-169.0" layoutY="78.0" prefHeight="444.0" prefWidth="625.0">
+                     <top>
+                        <Label textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <left>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="idNomIN" layoutX="198.0" layoutY="31.0" prefHeight="35.0" prefWidth="245.0" promptText="Nom" />
+                                    <TextField fx:id="idDescriptionIN" layoutX="198.0" layoutY="142.0" prefHeight="35.0" prefWidth="245.0" promptText="Description" />
+                                    <TextField fx:id="idNBPIN" layoutX="199.0" layoutY="196.0" prefHeight="35.0" prefWidth="245.0" promptText="nombre de participants" />
+                                    <TextField fx:id="idEmRespIN" layoutX="199.0" layoutY="253.0" prefHeight="35.0" prefWidth="245.0" promptText="Email du responsable" />
+                                    <TextField fx:id="idWAIN" layoutX="198.0" layoutY="306.0" prefHeight="35.0" prefWidth="245.0" promptText="Why attend ?" />
+                                    <DatePicker fx:id="idDateIN" layoutX="198.0" layoutY="86.0" prefHeight="35.0" prefWidth="245.0" />
+                                    <Button fx:id="AjoutE" layoutX="197.0" layoutY="370.0" mnemonicParsing="false" onAction="#AjoutE" prefHeight="35.0" prefWidth="250.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Ajouter" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </StackPane>
+                     </left>
+                  </BorderPane>
+                  <Line endX="316.0" endY="146.0" startX="316.0" startY="477.0" stroke="WHITE" />
+                  <TableView fx:id="idTabEVB" layoutX="351.0" layoutY="153.0" onMouseClicked="#ItemSelected" prefHeight="295.0" prefWidth="610.0" style="-fx-background-radius: 20;" styleClass="chart-plot-background" stylesheets="@../css/fullpackstyling.css">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="49.0" text="ID" />
+                      <TableColumn fx:id="idNomEv" prefWidth="71.0" text="Nom" />
+                        <TableColumn fx:id="idDateEv" prefWidth="87.0" text="Date" />
+                        <TableColumn fx:id="idDescEv" prefWidth="90.0" text="Description" />
+                        <TableColumn fx:id="idNBPEV" prefWidth="98.0" text="nbr Participants" />
+                        <TableColumn fx:id="idEmailRespEV" prefWidth="118.0" text="Email responsable" />
+                        <TableColumn fx:id="idWAEV" text="Why Attend?" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="idModif" layoutX="351.0" layoutY="477.0" mnemonicParsing="false" onAction="#ModifierE" prefHeight="35.0" prefWidth="250.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Modifier" />
+                  <Button fx:id="idSuppEVB" layoutX="711.0" layoutY="477.0" mnemonicParsing="false" onAction="#SupprimerEventB" prefHeight="35.0" prefWidth="250.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="supprimer" />
+                  <Label layoutX="49.0" layoutY="99.0" text="Ici vous pouvez ajouter vos events, les consulter,modifier et supprimer." textFill="#e7e5e5">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="997.0" layoutY="153.0" prefHeight="322.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" styleClass="pane" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                        <ImageView fitHeight="145.0" fitWidth="175.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pngtree-online-education-modern-illustration-png-image_1538142.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="18.0" layoutY="152.0" prefHeight="41.0" prefWidth="167.0" text="Événements" textFill="#451b52">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="183.0" prefHeight="104.0" prefWidth="174.0" text="Baskel Events are open events for everyone to attend, and there is no limit to the spots out there, bring your bike and come !" textAlignment="JUSTIFY" textFill="#757070" wrapText="true">
+                           <font>
+                              <Font name="Candara Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="62.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/tickkkkk.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="73.0" fitWidth="63.0" layoutX="49.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo%20icon%20white%20version.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@../css/fullpackstyling.css" />
+               </stylesheets>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

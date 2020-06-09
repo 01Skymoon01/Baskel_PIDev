@@ -1,0 +1,79 @@
+.button
+{
+-fx-background-color :  #353F59;
+-fx-text-fill : #e7e5e5;
+}
+
+.button:pressed
+{
+-fx-background-color : #353F59;
+}
+
+.scroll-pane {
+    -fx-background-color: #20002c;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color:  #353F59;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color:  #353F59;
+}
+
+.button:hover{
+-fx-background-color :  #11141c;
+}
+
+.check-box:selected > .box {
+    /* background color for selected checkbox */
+    -fx-background-color:  #0c0e1c;
+}
+
+.check-box > .box {
+    /* background color of unselected checkbox */
+    -fx-background-color:  #02030A;
+    -fx-border-color: gray;
+    
+}
+
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    /* modify mark color */
+    -fx-background-color:  #02030A;
+    -fx-border-color: gray;
+   
+}
+.text-area {
+   -fx-control-inner-background:#02030A;
+   -fx-border-color: gray;
+}
+
+.text-field{
+     -fx-text-fill: white;
+     
+}
+
+
+.combo-box .list-cell{
+     -fx-text-fill: white;
+     -fx-background-color: #02030A
+}

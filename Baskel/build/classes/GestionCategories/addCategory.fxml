@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" stylesheets="@../GestionProduits/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionCategories.AddCategoryController">
+   <children>
+      <AnchorPane fx:id="rootAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="1450.0" style="-fx-background-color: #152036;" stylesheets="@style.css">
+         <children>
+            <Button fx:id="addBtn" layoutX="717.0" layoutY="164.0" mnemonicParsing="false" onAction="#AjouterCat" prefHeight="27.0" prefWidth="52.0" style="-fx-background-color: #1B2A47;" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="18" />
+               </graphic>
+            </Button>
+            <TextField fx:id="textNomCat" layoutX="876.0" layoutY="112.0" style="-fx-background-color: #152036; -fx-border-color: gray; -fx-border-radius: 2em;" />
+            <TextField fx:id="textRefC" layoutX="507.0" layoutY="112.0" promptText="6 Chiffres" style="-fx-background-color: #152036; -fx-border-color: gray; -fx-border-radius: 2em;" />
+            <Label layoutX="402.0" layoutY="101.0" prefHeight="20.0" prefWidth="133.0" text="Référence:" textFill="#e7e5e5">
+               <font>
+                  <Font name="MS Reference Specialty" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="743.0" layoutY="99.0" prefHeight="17.0" prefWidth="147.0" text="Nom categorie:" textFill="#e7e5e5">
+               <font>
+                  <Font name="MS Reference Specialty" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBack" layoutX="1367.0" layoutY="30.0" mnemonicParsing="false" onAction="#showCat" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REPLY" size="30" />
+               </graphic>
+            </Button>
+            <ImageView fitHeight="280.0" fitWidth="498.0" layoutX="535.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/bikeimage.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="error" layoutX="78.0" layoutY="194.0" prefHeight="32.0" prefWidth="355.0" text="Oupss!!! Vérifiez vos données!" textFill="#e00c0c" visible="false">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#e00c0c" glyphName="WARNING" size="25" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

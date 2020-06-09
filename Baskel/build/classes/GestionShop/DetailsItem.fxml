@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: white; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionShop.DetailsItemController">
+   <children>
+      <Label layoutX="39.0" layoutY="34.0" text="Details du Produit : " textFill="#181516">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="NomProduit" layoutX="39.0" layoutY="72.0" text="nom produit" textFill="#181516">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutX="39.0" layoutY="234.0" prefHeight="85.0" prefWidth="472.0" style="-fx-background-color: #181516; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="58.0" layoutY="14.0" text="Couleurs:" textFill="#41951c">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox fx:id="colorbox" layoutX="58.0" layoutY="40.0" prefHeight="34.0" prefWidth="294.0" />
+            <MaterialDesignIconView fill="#f5eded" glyphName="BRUSH" layoutX="13.0" layoutY="37.0" size="30" />
+         </children>
+      </Pane>
+      <Pane layoutX="39.0" layoutY="345.0" prefHeight="66.0" prefWidth="472.0" style="-fx-background-color: #181516; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="58.0" layoutY="9.0" text="Etat:" textFill="#41951c">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="stock" layoutX="58.0" layoutY="27.0" text="Save this search and get a notification when price changes" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <OctIconView fill="#ebe8e8" glyphName="DATABASE" layoutX="14.0" layoutY="38.0" size="30" />
+         </children>
+      </Pane>
+      <Pane layoutX="569.0" layoutY="46.0" prefHeight="297.0" prefWidth="270.0" style="-fx-background-radius: 20; -fx-background-color: white;" styleClass="linear-grad" stylesheets="@../../../Adhma/src/css/fullpackstyling.css">
+         <children>
+            <Rectangle fx:id="rectangleImg" arcHeight="5.0" arcWidth="5.0" fill="#f8fafc" height="240.0" layoutX="18.0" layoutY="25.0" stroke="TRANSPARENT" strokeType="INSIDE" width="233.0" />
+            <Label fx:id="PrixP2" layoutX="66.0" layoutY="201.0" opacity="0.0" text="500" textFill="#9f1740">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="190.0" layoutY="228.0" mnemonicParsing="false" onAction="#AjouterWishlist" style="-fx-background-color: none;">
+               <graphic>
+                  <FontAwesomeIconView fill="#900131" glyphName="HEART" size="50" />
+               </graphic>
+            </Button>
+            <Label layoutX="121.0" layoutY="201.0" opacity="0.0" text=" DNT" textFill="#9f1740">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Line endX="100.0" layoutX="445.0" layoutY="54.0" startX="100.0" startY="418.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+      <Label layoutX="569.0" layoutY="377.0" prefHeight="27.0" prefWidth="88.0" text="A propos" textFill="#181516">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nomProd" layoutX="647.0" layoutY="377.0" text="nom Produit" textFill="#fff600">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <BorderPane layoutX="569.0" layoutY="404.0" prefHeight="66.0" prefWidth="270.0">
+         <top>
+            <Label fx:id="desc" alignment="CENTER" prefWidth="265.0" text="desc" textFill="#9a9292" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+      <Pane layoutX="39.0" layoutY="129.0" prefHeight="66.0" prefWidth="472.0" style="-fx-background-color: #181516; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="58.0" layoutY="14.0" text="Prix :" textFill="#41951c">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="prixP" layoutX="58.0" layoutY="34.0" text="500 " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="prixP1" layoutX="86.0" layoutY="34.0" text="DNT" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#fcfcfc" glyphName="DOLLAR" layoutX="14.0" layoutY="43.0" size="30" />
+         </children>
+      </Pane>
+      <HBox layoutX="281.0" layoutY="39.0" prefHeight="38.0" prefWidth="183.0" spacing="5.0">
+         <children>
+            <FontAwesomeIconView glyphName="STAR_ALT" size="30" />
+            <FontAwesomeIconView glyphName="STAR_ALT" size="30" />
+            <FontAwesomeIconView glyphName="STAR_ALT" size="30" />
+            <FontAwesomeIconView glyphName="STAR_ALT" size="30" />
+            <FontAwesomeIconView glyphName="STAR_ALT" size="30" />
+         </children>
+      </HBox>
+      <FontAwesomeIconView glyphName="REMOVE" layoutX="849.0" layoutY="31.0" onMouseClicked="#removeWindow" size="20" />
+   </children>
+</AnchorPane>

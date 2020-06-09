@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="1051.0" style="-fx-background-color: #ededed; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionEvents.AffichageEventsFront">
+   <children>
+      <Label layoutX="39.0" layoutY="81.0" text="Ici vous pouvez trouver tous les evenements" textFill="#511b1b">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="109.0" text="What are you waiting for ? book your spot now !" textFill="#181516">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="MyResBtn" layoutX="898.0" layoutY="29.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#MesReservations" prefHeight="80.0" prefWidth="63.0" style="-fx-border-radius: 10; -fx-background-color: none;" styleClass="button2" stylesheets="@../css/fullpackstyling.css">
+         <graphic>
+            <MaterialDesignIconView fx:id="MesReservations" glyphName="CONTACT_MAIL" size="70" style="-fx-fill: black;" wrappingWidth="76.0" />
+         </graphic>
+      </Button>
+      <TableView fx:id="idTabEVB" layoutX="30.0" layoutY="179.0" onMouseClicked="#ItemSelected" prefHeight="375.0" prefWidth="985.0" style="-fx-background-radius: 20;" styleClass="chart-plot-background" stylesheets="@../css/fullpackstyling.css">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="49.0" text="ID" />
+          <TableColumn fx:id="idNomEv" prefWidth="71.0" text="Nom" />
+            <TableColumn fx:id="idDateEv" prefWidth="87.0" text="Date" />
+            <TableColumn fx:id="idDescEv" prefWidth="128.0" text="Description" />
+            <TableColumn fx:id="idNBPEV" prefWidth="146.0" text="nbr Participants" />
+            <TableColumn fx:id="idEmailRespEV" prefWidth="174.0" text="Email responsable" />
+            <TableColumn fx:id="idWAEV" prefWidth="329.0" text="Why Attend?" />
+        </columns>
+      </TableView>
+      <Label layoutX="76.0" layoutY="37.0" text="Reserver Maintenant !" textFill="#181516">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtnRes" layoutX="458.0" layoutY="580.0" mnemonicParsing="false" onAction="#Reserver" prefHeight="37.0" prefWidth="136.0" style="-fx-background-color: black;" styleClass="button2" text="RESERVER" textFill="#f8f8f8" />
+      <MaterialDesignIconView glyphName="CALENDAR_CLOCK" layoutX="24.0" layoutY="67.0" size="45" />
+   </children>
+</AnchorPane>

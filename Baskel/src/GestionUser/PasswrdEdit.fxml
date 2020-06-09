@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="blue-panel" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PasswrdEditController">
+   <children>
+      <TextField fx:id="mdp1" layoutX="106.0" layoutY="80.0" prefHeight="54.0" prefWidth="388.0" promptText="Entrez le nouveau mot de passe" styleClass="tf_box" />
+      <TextField fx:id="mdp2" layoutX="102.0" layoutY="180.0" prefHeight="54.0" prefWidth="396.0" promptText="Répétez le nouveau mot de passe" styleClass="tf_box" />
+      <Button fx:id="confirmer2" layoutX="241.0" layoutY="289.0" mnemonicParsing="false" onAction="#confirmer" text="confirmer" />
+   </children>
+</AnchorPane>

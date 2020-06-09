@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RDVController">
+   <children>
+      <AnchorPane prefHeight="697.0" prefWidth="1124.0" style="-fx-background-radius: 15 0 0 15;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css">
+         <children>
+            <VBox prefHeight="544.0" prefWidth="74.0" style="-fx-background-color: #451b52; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane prefHeight="139.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15; -fx-background-color: #451b52;" />
+               </children>
+            </VBox>
+            <AnchorPane layoutX="118.0" layoutY="65.0" prefHeight="600.0" prefWidth="973.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling.css">
+               <children>
+                  <TextArea fx:id="TFdetailsFront" layoutX="609.0" layoutY="407.0" prefHeight="140.0" prefWidth="290.0" promptText="Donnez-nous plus de details" />
+                  <Label layoutX="39.0" layoutY="81.0" text="Vous pouvez trouvez your reendez-vous" textFill="#4f1c54">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="39.0" layoutY="106.0" text="You can also delete and modfiy them accrodingly" textFill="#c992d7">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="609.0" layoutY="37.0" prefHeight="270.0" prefWidth="290.0" style="-fx-background-radius: 20;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                        <Label layoutX="45.0" layoutY="114.0" text="Rendez-Vous" textFill="WHITE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="111.0" fitWidth="98.0" layoutX="102.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/frite.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="18.0" layoutY="175.0" prefWidth="265.0" text="Mythic + dangerous 5 player dungeons where you must try to finish the run before a timer runs out. The time is applied to the dungeons you can play in normal/heroic/ mythic diff" textFill="#9a9292" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Line endX="122.0" endY="-7.0" layoutX="427.0" layoutY="56.0" startX="122.0" startY="467.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+                  <ComboBox fx:id="CombObjetRDVFront" layoutX="609.0" layoutY="310.0" prefHeight="37.0" prefWidth="290.0" styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" />
+                  <Button fx:id="ajouterRDV" layoutX="773.0" layoutY="556.0" mnemonicParsing="false" onAction="#ajouterRDV" prefHeight="37.0" prefWidth="159.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Passer" />
+                  <TableView fx:id="TabRDVFront" layoutX="12.0" layoutY="150.0" onMouseClicked="#ItemSelected" prefHeight="375.0" prefWidth="529.0" styleClass="table-viewf" stylesheets="@../css/fullpackstyling.css">
+                    <columns>
+                      <TableColumn fx:id="idRDV" prefWidth="75.0" text="IDRDV" />
+                      <TableColumn fx:id="dateDepotRDVFront" prefWidth="93.0" text="Date Depot" />
+                        <TableColumn fx:id="DateRDV" prefWidth="89.0" text="Date RdV" />
+                        <TableColumn fx:id="objetRDVFront" prefWidth="121.0" text="Objet" />
+                        <TableColumn fx:id="etatRDVFront" prefWidth="96.0" text="Etat" />
+                        <TableColumn fx:id="detailsRDVFront" prefWidth="30.0" text="Details" />
+                        <TableColumn fx:id="technicienRDV" prefWidth="199.0" text="Technicien" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="39.0" layoutY="37.0" text="PASSEZ VOS RENDEZ-VOUS !" textFill="#6f2d72">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="modifierRDV" layoutX="374.0" layoutY="541.0" mnemonicParsing="false" onAction="#modifierRDV" prefHeight="37.0" prefWidth="136.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Modifier" />
+                  <Button fx:id="supprimerRDV" layoutX="45.0" layoutY="541.0" mnemonicParsing="false" onAction="#supprimerRDV" prefHeight="37.0" prefWidth="136.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Supprimer" />
+                  <DatePicker fx:id="dateRDVpicker" layoutX="610.0" layoutY="353.0" prefHeight="31.0" prefWidth="290.0" styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" />
+                  <Label fx:id="lblDate" layoutX="610.0" layoutY="386.0" />
+                  <Label fx:id="lblDetails" layoutX="610.0" layoutY="549.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="134.0" layoutY="29.0" text="How can we help you ? " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

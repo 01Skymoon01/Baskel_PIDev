@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="item" onMouseEntered="#ShowButton" onMouseExited="#UnShowButton" prefHeight="319.0" prefWidth="267.0" style="-fx-background-color: white; -fx-border-color: #bfb7bf;" styleClass="linear-grad" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionShop.ItemProduitController">
+   <children>
+      <Pane fx:id="ItemForBlur" prefHeight="319.0" prefWidth="267.0">
+         <children>
+            <Label fx:id="nom01" layoutX="92.0" layoutY="160.0" prefHeight="41.0" prefWidth="117.0" text="Baskla">
+               <font>
+                  <Font name="Marlett" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="Prix01" layoutX="100.0" layoutY="193.0" prefHeight="37.0" prefWidth="72.0" text="200" textAlignment="JUSTIFY" textFill="#da3e2f" wrapText="true">
+               <font>
+                  <Font name="Candara Light" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="144.0" layoutY="199.0" prefHeight="31.0" prefWidth="37.0" text="DNT" textAlignment="JUSTIFY" textFill="#da3e2f" wrapText="true">
+               <font>
+                  <Font name="Candara Light" size="15.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="rectangleImg" arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="126.0" layoutX="39.0" layoutY="21.0" stroke="TRANSPARENT" strokeType="INSIDE" width="189.0" />
+            <Label fx:id="refP" layoutX="92.0" layoutY="254.0" prefHeight="21.0" prefWidth="88.0" text="ht" visible="false" />
+         </children>
+      </Pane>
+      <Button fx:id="Details" layoutX="78.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#Details" onMouseEntered="#RedButton" onMouseExited="#BlackButton" prefHeight="41.0" prefWidth="117.0" style="-fx-background-color: black;" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="#f2ecec" glyphName="EYE" size="30" />
+         </graphic>
+      </Button>
+      <Button fx:id="AddToCart" layoutX="79.0" layoutY="161.0" mnemonicParsing="false" onAction="#AddToCart" onMouseEntered="#RedButton2" onMouseExited="#BlackButton2" prefHeight="41.0" prefWidth="117.0" style="-fx-background-color: black;" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="#ebe8e8" glyphName="SHOPPING_CART" size="30" />
+         </graphic>
+      </Button>
+   </children>
+</Pane>

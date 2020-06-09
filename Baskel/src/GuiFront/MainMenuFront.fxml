@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="697.0" prefWidth="1124.0" style="-fx-background-radius: 15 0 0 15; -fx-background-color: #ededed;" styleClass="linear-grad" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiFront.MainMenuFrontController">
+   <children>
+      <VBox prefHeight="544.0" prefWidth="74.0" spacing="40.0" style="-fx-background-color: #181516; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FontAwesomeIconView fill="TRANSPARENT" size="50" wrappingWidth="12.0" />
+            <Button fx:id="btnprofil" mnemonicParsing="false" onAction="#btnprofil" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: none;" textFill="#eeeaea">
+               <graphic>
+                  <MaterialDesignIconView fill="#ebe7e7" glyphName="ACCOUNT_CIRCLE" size="30" />
+               </graphic>
+            </Button>
+            <Button fx:id="shop" layoutX="10.0" layoutY="71.0" mnemonicParsing="false" onAction="#shop" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: none;" textFill="#eeeaea">
+               <graphic>
+                  <MaterialDesignIconView fill="#f5f5f5" glyphName="HOME" size="30" />
+               </graphic>
+            </Button>
+            <Button fx:id="favoris" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" onAction="#favoris" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: none;" textFill="#eeeaea">
+               <graphic>
+                  <MaterialDesignIconView fill="#f5f2f2" glyphName="HEART_BOX" size="30" />
+               </graphic>
+            </Button>
+            <Button fx:id="event" layoutX="10.0" layoutY="71.0" mnemonicParsing="false" onAction="#event" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: none;" textFill="#eeeaea">
+               <graphic>
+                  <MaterialDesignIconView fill="#fffbfb" glyphName="CALENDAR_CLOCK" size="30" />
+               </graphic>
+            </Button>
+            <Button fx:id="rendezVous" layoutX="10.0" layoutY="261.0" mnemonicParsing="false" onAction="#rendezVous" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: none;" textFill="#eeeaea">
+               <graphic>
+                  <MaterialDesignIconView fill="#f5f2f2" glyphName="FORUM" size="30" />
+               </graphic>
+            </Button>
+            <Button fx:id="SAV" layoutX="10.0" layoutY="172.0" mnemonicParsing="false" onAction="#SAV" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: none;" textFill="#eeeaea">
+               <graphic>
+                  <OctIconView fill="#fffdfd" glyphName="STOP" size="30" />
+               </graphic>
+            </Button>
+            <Button fx:id="logOut" layoutX="10.0" layoutY="342.0" mnemonicParsing="false" onAction="#logOut" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: none;" textFill="#eeeaea">
+               <graphic>
+                  <OctIconView fill="#fffdfd" glyphName="SIGN_IN" size="30" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="holderPane" layoutX="76.0" layoutY="51.0" prefHeight="650.0" prefWidth="1051.0" />
+      <ImageView fitHeight="41.0" fitWidth="156.0" layoutX="102.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Gui/Front/resources/logo_1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

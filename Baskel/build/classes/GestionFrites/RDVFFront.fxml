@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1051.0" style="-fx-background-color: #ededed; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionFrites.RDVController">
+   <children>
+      <TextArea fx:id="TFdetailsFront" layoutX="727.0" layoutY="392.0" prefHeight="140.0" prefWidth="290.0" promptText="Donnez-nous plus de details" />
+      <Label layoutX="39.0" layoutY="81.0" text="Vous pouvez trouvez your reendez-vous" textFill="#511b1b">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="106.0" text="You can also delete and modfiy them accrodingly" textFill="#181516">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Pane layoutX="725.0" layoutY="14.0" prefHeight="270.0" prefWidth="290.0" style="-fx-background-radius: 20;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css">
+         <children>
+            <Label layoutX="45.0" layoutY="114.0" text="Rendez-Vous" textFill="#170101">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="111.0" fitWidth="98.0" layoutX="102.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/frite.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="18.0" layoutY="175.0" prefWidth="265.0" text="NB: Toute modification ou suppression seras impossible apres minuit." textFill="#9a9292" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Line endX="122.0" endY="-7.0" layoutX="583.0" layoutY="56.0" startX="122.0" startY="467.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+      <ComboBox fx:id="CombObjetRDVFront" layoutX="725.0" layoutY="290.0" prefHeight="37.0" prefWidth="290.0" styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" />
+      <Button fx:id="ajouterRDV" layoutX="793.0" layoutY="567.0" mnemonicParsing="false" onAction="#ajouterRDV" prefHeight="37.0" prefWidth="159.0" style="-fx-background-color: black;" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="PASSER" textFill="#f8f7f7" />
+      <TableView fx:id="TabRDVFront" layoutX="30.0" layoutY="179.0" onMouseClicked="#ItemSelected" prefHeight="375.0" prefWidth="650.0" styleClass="table-viewf" stylesheets="@../css/fullpackstyling.css">
+        <columns>
+            <TableColumn fx:id="supprimer" prefWidth="38.0" />
+          <TableColumn fx:id="idRDV" prefWidth="35.0" text="ID" />
+          <TableColumn fx:id="dateDepotRDVFront" prefWidth="95.0" text="Date Depot" />
+            <TableColumn fx:id="DateRDV" prefWidth="103.0" text="Date RdV" />
+            <TableColumn fx:id="objetRDVFront" prefWidth="90.0" text="Objet" />
+            <TableColumn fx:id="etatRDVFront" prefWidth="91.0" text="Etat" />
+            <TableColumn fx:id="detailsRDVFront" prefWidth="96.0" text="Details" />
+            <TableColumn fx:id="technicienRDV" maxWidth="120.0" prefWidth="101.0" text="Technicien" />
+        </columns>
+      </TableView>
+      <Label layoutX="76.0" layoutY="37.0" text="PASSEZ VOS RENDEZ-VOUS !" textFill="#181516">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="modifierRDV" layoutX="273.0" layoutY="572.0" mnemonicParsing="false" onAction="#modifierRDV" prefHeight="37.0" prefWidth="159.0" style="-fx-background-color: black;" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="MODIFIER" textFill="#fff9f9" />
+      <DatePicker fx:id="dateRDVpicker" layoutX="725.0" layoutY="342.0" prefHeight="31.0" prefWidth="290.0" styleClass="combo-box" stylesheets="@../css/fullpackstyling.css" />
+      <Label fx:id="lblDate" layoutX="610.0" layoutY="386.0" />
+      <Label fx:id="lblDetails" layoutX="610.0" layoutY="549.0" />
+      <TextField fx:id="filterField" layoutX="500.0" layoutY="104.0" onKeyPressed="#Recherche" prefHeight="33.0" prefWidth="159.0" promptText="Chercher" style="-fx-background-color: #ededed; -fx-border-color: #B7C3D7; -fx-border-radius: 10; -fx-text-fill: black;" />
+      <MaterialDesignIconView glyphName="FORUM" layoutX="24.0" layoutY="67.0" size="45" />
+   </children>
+</AnchorPane>

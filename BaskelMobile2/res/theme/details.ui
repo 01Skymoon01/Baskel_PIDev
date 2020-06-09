@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="details" cloudDestinationProperty="details" scrollVisible="true" layout="BorderLayout" borderLayoutAbsoluteCenter="false" >
+  <component type="Container" name="Container1" cloudDestinationProperty="Container1" layout="FlowLayout" flowLayoutFillRows="true" flowLayoutAlign="4" flowLayoutValign="4" >
+    <layoutConstraint value="North" />
+    <component type="Label" name="idCommande" cloudDestinationProperty="idCommande" text="Label" >
+    </component>
+  </component>
+</component>

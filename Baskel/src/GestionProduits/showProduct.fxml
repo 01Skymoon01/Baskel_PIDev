@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="1218.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionProduits.showProductController">
+   <children>
+      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="1218.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane fx:id="showprodpanel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="1218.0" style="-fx-background-color: #152036;">
+               <children>
+                  <BorderPane layoutX="633.0" layoutY="142.0" prefHeight="397.0" prefWidth="535.0" style="-fx-background-color: transparent; -fx-border-color: #353f59;" />
+                  <TableView fx:id="tableProd" layoutX="25.0" layoutY="154.0" prefHeight="358.0" prefWidth="575.0" stylesheets="@styleTableView.css">
+                     <columns>
+                        <TableColumn fx:id="ref_p" prefWidth="238.99996948242188" text="Réference" />
+                        <TableColumn fx:id="nom_p" minWidth="0.0" prefWidth="357.0" text="Nom_Produit" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnRemoveProd" layoutX="513.0" layoutY="78.0" mnemonicParsing="false" onAction="#supprimerProd" prefHeight="49.0" prefWidth="56.0" style="-fx-background-color: #1B2A47;" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="textUpdate" layoutX="894.0" layoutY="35.0" prefHeight="33.0" prefWidth="193.0" promptText="Recherche" style="-fx-background-color: #152036; -fx-border-color: #B7C3D7; -fx-border-radius: 2em; -fx-text-fill: white;" stylesheets="@../Home/style.css">
+                     <font>
+                        <Font name="MS Reference Specialty" size="10.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updateProdBtn" layoutX="841.0" layoutY="37.0" mnemonicParsing="false" onAction="#updateProduct" style="-fx-background-color: #1B2A47;" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="13" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnAddProd" layoutX="424.0" layoutY="79.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="49.0" prefWidth="56.0" style="-fx-background-color: #1B2A47;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Rectangle fx:id="rectangleImg" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="129.0" layoutX="670.0" layoutY="202.0" stroke="#02030a" strokeType="INSIDE" style="-fx-fill: none; -fx-border-color: red;" width="162.0" />
+                  <Label alignment="CENTER" contentDisplay="BOTTOM" layoutX="665.0" layoutY="161.0" prefHeight="34.0" prefWidth="126.0" text="Details:" textFill="WHITE">
+                     <font>
+                        <Font name="MS Reference Specialty" size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="nomCat" layoutX="675.0" layoutY="345.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="genre" layoutX="675.0" layoutY="391.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="marque" layoutX="675.0" layoutY="487.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="quantite" layoutX="675.0" layoutY="440.0" prefHeight="30.0" prefWidth="241.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="propos" layoutX="927.0" layoutY="339.0" textFill="#a868a0">
+                     <font>
+                        <Font name="Calisto MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="prixLab" layoutX="862.0" layoutY="187.0" textFill="#ae3fff">
+                     <font>
+                        <Font name="Calisto MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="prix" layoutX="936.0" layoutY="195.0" prefHeight="20.0" prefWidth="151.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="description" layoutX="927.0" layoutY="393.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="colorbox" layoutX="863.0" layoutY="264.0" prefHeight="49.0" prefWidth="151.0" style="-fx-background-color: transparent;" />
+                  <Label fx:id="colorLab" layoutX="862.0" layoutY="230.0" textFill="#ae3fff">
+                     <font>
+                        <Font name="Calisto MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="1059.0" layoutY="87.0" mnemonicParsing="false" onAction="#RemisePrix" prefHeight="31.0" prefWidth="109.0" style="-fx-background-color: #1B2A47;" text="Remise" textFill="#fcfafa">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TAGS" size="13" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnRemise" layoutX="999.0" layoutY="89.0" mnemonicParsing="false" onAction="#updatePrix" prefHeight="25.0" prefWidth="45.0" style="-fx-background-color: #1B2A47;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="THUMBS_UP" size="18" />
+                     </graphic>
+                  </Button>
+                  <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#152036" height="49.0" layoutX="985.0" layoutY="82.0" stroke="#152036" strokeType="INSIDE" width="73.0" />
+                  <Label fx:id="labelRemise" layoutX="671.0" layoutY="203.0" prefHeight="17.0" prefWidth="103.0" style="-fx-background-color: #F44336;" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pagination fx:id="pagination" layoutX="25.0" layoutY="158.0" prefHeight="387.0" prefWidth="575.0" stylesheets="@style.css" />
+                  <Button layoutX="25.0" layoutY="32.0" mnemonicParsing="false" onAction="#Calculator" prefHeight="73.0" prefWidth="73.0" style="-fx-background-color: TRANSPARENT;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALCULATOR" size="50" text="" />
+                     </graphic>
+                  </Button>
+                  <Button layoutX="130.0" layoutY="42.0" mnemonicParsing="false" onAction="#Statistiques" prefHeight="58.0" prefWidth="64.0" style="-fx-background-color: none;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="45" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="120.0" layoutY="104.0" prefHeight="21.0" prefWidth="109.0" text=" Statistiques &gt;" textFill="#e7e5e5">
+                     <font>
+                        <Font name="MS Reference Specialty" size="15.0" />
+                     </font></Label>
+                  <Label layoutX="20.0" layoutY="103.0" prefHeight="21.0" prefWidth="84.0" text="Calculatrice" textFill="#e7e5e5">
+                     <font>
+                        <Font name="MS Reference Specialty" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textRemise" layoutX="765.0" layoutY="98.0" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: #02030A; -fx-border-color: gray;" stylesheets="@../Home/style.css" visible="false" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

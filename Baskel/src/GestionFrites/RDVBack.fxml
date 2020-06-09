@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionFrites.RDVBACKController">
+   <children>
+      <BorderPane prefHeight="554.0" prefWidth="1216.0">
+         <bottom>
+            <Pane fx:id="pnlOverview1" prefHeight="554.0" prefWidth="1218.0" style="-fx-background-color: #152036;" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane layoutX="-37.0" layoutY="81.0" prefHeight="444.0" prefWidth="625.0">
+                     <center>
+                        <StackPane prefHeight="420.0" prefWidth="527.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane prefHeight="444.0" prefWidth="524.0">
+                                 <children>
+                                    <Line endX="502.0" endY="152.0" layoutX="-62.0" layoutY="-93.0" startX="502.0" startY="478.0" stroke="WHITE" />
+                                    <ComboBox fx:id="ComboTechnicien" layoutX="124.0" layoutY="159.0" prefHeight="33.0" prefWidth="210.0" promptText="Choisir Technicien" style="-fx-background-color: white; -fx-border-color: white;" styleClass="combo-box22" stylesheets="@../css/fullpackstyling.css" />
+                                    <Button fx:id="affecterRDV" layoutX="145.0" layoutY="408.0" mnemonicParsing="false" onAction="#affecterRDV" prefHeight="43.0" prefWidth="169.0" style="-fx-background-color: #1B2A47;" styleClass="supprimer" stylesheets="@../css/fullpackstyling.css" text="Affecter" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </StackPane>
+                     </center>
+                  </BorderPane>
+                  <TableView fx:id="TabRDVBack" layoutX="442.0" layoutY="152.0" onMouseClicked="#ItemSelected" prefHeight="295.0" prefWidth="733.0" styleClass="chart-plot-background" stylesheets="@../css/fullpackstyling.css">
+                    <columns>
+                        <TableColumn fx:id="supprimer" prefWidth="41.0" />
+                      <TableColumn fx:id="useridBack" prefWidth="63.0" text="User" />
+                      <TableColumn fx:id="idRDVBack" prefWidth="77.0" text="ID" />
+                        <TableColumn fx:id="dateDepRDVBack" prefWidth="110.0" text="Date Depot" />
+                        <TableColumn fx:id="dateRDVBack" prefWidth="109.0" text="Date RDV" />
+                        <TableColumn fx:id="objetRDVBack" prefWidth="98.0" text="Objet" />
+                        <TableColumn fx:id="etatRDVBack" prefWidth="109.0" text="Etat " />
+                        <TableColumn fx:id="detailsRDVBack" maxWidth="100.0" prefWidth="351.0" text="Details" />
+                        <TableColumn fx:id="technicienRDVBack" maxWidth="100.0" prefWidth="117.0" text="Technicien" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="traiterRDV" layoutX="865.0" layoutY="488.0" mnemonicParsing="false" onAction="#traiterRDV" prefHeight="43.0" prefWidth="170.0" style="-fx-background-color: green;" styleClass="accepter" stylesheets="@../css/fullpackstyling.css" text="Accepter" />
+                  <Button fx:id="sendPDF" layoutX="1099.0" layoutY="487.0" mnemonicParsing="false" onAction="#sendPDF" prefHeight="43.0" prefWidth="64.0" style="-fx-background-color: #1B2A47;" styleClass="supprimer" stylesheets="@../css/fullpackstyling.css" text="PDF" />
+                  <Button fx:id="refuserRDV" layoutX="564.0" layoutY="489.0" mnemonicParsing="false" onAction="#refuserRDV" prefHeight="43.0" prefWidth="171.0" style="-fx-background-color: red;" styleClass="refuser" stylesheets="@../css/fullpackstyling.css" text="Refuser" />
+                  <TextField fx:id="filterField" layoutX="974.0" layoutY="24.0" prefHeight="27.0" prefWidth="183.0" promptText="Chercher" style="-fx-background-color: #152036; -fx-border-color: #B7C3D7; -fx-border-radius: 2em; -fx-text-fill: white;" />
+                  <ImageView fitHeight="83.0" fitWidth="125.0" layoutX="35.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Gui/Front/resources/phone-39-64.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="138.0" layoutY="50.0" prefHeight="21.0" prefWidth="167.0" text="Rendez-vous:" textFill="WHITE">
+                     <font>
+                        <Font name="MS Reference Specialty" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@../css/fullpackstyling.css" />
+               </stylesheets>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

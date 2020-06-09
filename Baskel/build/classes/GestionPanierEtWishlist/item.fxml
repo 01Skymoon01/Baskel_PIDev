@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<Pane fx:id="itemC" prefHeight="73.0" prefWidth="986.0" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionPanierEtWishlist.ItemController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="7.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="972.0" spacing="40.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-background-insets: 0; -fx-border-color: #a69c9f;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="94.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Button mnemonicParsing="false" onAction="#remove" prefHeight="31.0" prefWidth="39.0" style="-fx-background-color: none;">
+               <graphic>
+                  <FontAwesomeIconView glyphName="REMOVE" size="20" />
+               </graphic>
+            </Button>
+            <Rectangle fx:id="rectangleImg" arcHeight="5.0" arcWidth="5.0" fill="#e6ecf2" height="54.0" stroke="BLACK" strokeType="INSIDE" width="82.0" />
+            <Label fx:id="refP" prefHeight="21.0" prefWidth="143.0" textFill="#181516" />
+            <Label fx:id="nom01" prefHeight="21.0" prefWidth="95.0" text="JFK" textFill="#181516">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="Prix01" prefHeight="21.0" prefWidth="79.0" text="\$200" textFill="#181516">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Spinner fx:id="qte" onMouseClicked="#modifierQte" prefHeight="16.0" prefWidth="104.0" />
+            <Label fx:id="Prix011" prefHeight="21.0" prefWidth="83.0" text="\$200" textFill="#181516" />
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+         </effect>
+      </HBox>
+   </children>
+</Pane>

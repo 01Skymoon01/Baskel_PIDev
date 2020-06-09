@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionEvents.AffichagePartenairesBackController">
+   <children>
+      <BorderPane prefHeight="554.0" prefWidth="1216.0">
+         <center>
+            <Pane fx:id="pnlOverview1" prefHeight="554.0" prefWidth="1218.0" styleClass="linear-grad" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField layoutX="1005.0" layoutY="33.0" prefHeight="27.0" prefWidth="183.0" promptText="Chercher" styleClass="textfield" />
+                  <Label layoutX="132.0" layoutY="22.0" text="Ajouter vos Partenaires !" textFill="#e7e5e5">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="1161.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+                  <BorderPane layoutX="-169.0" layoutY="78.0" prefHeight="444.0" prefWidth="625.0">
+                     <top>
+                        <Label textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <left>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="idNomIN" layoutX="198.0" layoutY="68.0" prefHeight="35.0" prefWidth="245.0" promptText="Nom" />
+                                    <TextField fx:id="idDescriptionIN" layoutX="198.0" layoutY="130.0" prefHeight="35.0" prefWidth="245.0" promptText="Description" />
+                                    <TextField fx:id="idRepIN" layoutX="198.0" layoutY="255.0" prefHeight="35.0" prefWidth="245.0" promptText="Representant"  />
+                                    <ComboBox fx:id="idTypeIN" layoutX="198.0" layoutY="190.0" prefHeight="33.0" prefWidth="247.0" styleClass="combo-box" />
+                                    <Button fx:id="AjoutP" layoutX="199.0" layoutY="366.0" mnemonicParsing="false" onAction="#AjoutP" prefHeight="43.0" prefWidth="254.0"  text="Ajouter" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </StackPane>
+                     </left>
+                  </BorderPane>
+                  <Line endX="330.0" endY="144.0" startX="330.0" startY="476.0" stroke="WHITE" />
+                  <TableView fx:id="idTabP" layoutX="410.0" layoutY="153.0" onMouseClicked="#ItemSelected" prefHeight="295.0" prefWidth="397.0" style="-fx-background-radius: 20;" styleClass="chart-plot-background" >
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="49.0" text="ID" />
+                      <TableColumn fx:id="idNomP" prefWidth="71.0" text="Nom" />
+                        <TableColumn fx:id="idDescP" prefWidth="87.0" text="Description" />
+                        <TableColumn fx:id="idTypeP" prefWidth="90.0" text="Type" />
+                        <TableColumn fx:id="idRepP" prefWidth="98.0" text="Representant" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="idModif" layoutX="365.0" layoutY="477.0" mnemonicParsing="false" onAction="#ModifierP" prefHeight="43.0" prefWidth="169.0" styleClass="button1"  text="Modifier" />
+                  <Button fx:id="idSuppEVB" layoutX="686.0" layoutY="477.0" mnemonicParsing="false" onAction="#supprimerP" prefHeight="43.0" prefWidth="167.0" styleClass="button1"  text="supprimer" />
+                  <Label layoutX="49.0" layoutY="99.0" text="Ici vous pouvez ajouter vos Partenaires, les consulter,modifier et supprimer." textFill="#e7e5e5">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="935.0" layoutY="153.0" prefHeight="322.0" prefWidth="246.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" styleClass="pane" >
+                     <children>
+                        <ImageView fitHeight="145.0" fitWidth="175.0" layoutX="52.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/partners.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="43.0" layoutY="156.0" prefHeight="41.0" prefWidth="167.0" text="Partenaires" textFill="#451b52">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="194.0" prefHeight="104.0" prefWidth="174.0" text="This is a space to add and consult your partners and even update them. Make your  events more successful with strong partnerships" textFill="#757070" wrapText="true">
+                           <font>
+                              <Font name="Candara Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="92.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/tickkkkk.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="73.0" fitWidth="63.0" layoutX="49.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo%20icon%20white%20version.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="8.0" endY="303.0" layoutX="876.0" layoutY="180.0" startX="8.0" startY="-38.0" stroke="WHITE" />
+                  <Label layoutX="33.0" layoutY="150.0" text="Veuillez saisir les coordonnés du partenaire si dessous" textFill="#e7e5e5">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="idSignCon" layoutX="577.0" layoutY="477.0" mnemonicParsing="false" onAction="#pressButton" prefHeight="43.0" prefWidth="63.0" styleClass="button1" text="☑" />
+               </children>
+             
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

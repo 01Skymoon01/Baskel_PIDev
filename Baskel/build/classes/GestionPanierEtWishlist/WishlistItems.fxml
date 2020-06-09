@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="myAnchor" prefHeight="650.0" prefWidth="1051.0" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionPanierEtWishlist.WishlistItemsController">
+   <children>
+      <ScrollPane layoutX="19.0" layoutY="145.0" prefHeight="354.0" prefWidth="969.0" style="-fx-background-color: none;" styleClass="mylistview" stylesheets="@../GestionShop/scrollbarCss.css">
+         <content>
+            <TilePane fx:id="tilePane" hgap="30.0" prefHeight="352.0" prefWidth="964.0" style="-fx-background-color: none;" vgap="30.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="106.0" layoutY="27.0" text="Votre Wishlist!">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="144.0" layoutY="99.0" text="Produit" textFill="#181516">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="19.0" layoutY="140.0" opacity="0.45" prefHeight="2.0" prefWidth="969.0" />
+      <Label layoutX="583.0" layoutY="99.0" text="Prix" textFill="#181516">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="811.0" layoutY="99.0" text="Quantite" textFill="#181516">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="67.0" fitWidth="78.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Gui/Front/resources/wishlist.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

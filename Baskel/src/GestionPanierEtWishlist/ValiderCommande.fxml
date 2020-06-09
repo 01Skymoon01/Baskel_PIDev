@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1051.0" style="-fx-background-radius: 15 0 0 15; -fx-background-color: #ededed;" styleClass="linear-grad" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionPanierEtWishlist.ValiderCommandeController">
+   <children>
+      <Separator layoutX="41.0" layoutY="415.0" opacity="0.45" prefHeight="2.0" prefWidth="969.0" />
+      <ImageView fitHeight="175.0" fitWidth="266.0" layoutX="438.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Gui/Front/resources/thank-you.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="456.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Gui/Front/resources/multimedia.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="293.0" layoutY="425.0" prefHeight="54.0" prefWidth="562.0" text="Baskel vour remercie pour votre confiance! Verifiez votre mail s'il vous plait.">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
