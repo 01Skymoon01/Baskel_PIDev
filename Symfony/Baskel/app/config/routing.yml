@@ -1,0 +1,41 @@
+livraison:
+    resource: "@LivraisonBundle/Resources/config/routing.yml"
+    prefix:   /liv
+
+event:
+    resource: "@EventBundle/Resources/config/routing.yml"
+    prefix:   /Event
+
+forum:
+    resource: "@forumBundle/Resources/config/routing.yml"
+    prefix:   /Hatem
+
+frite:
+    resource: "@FriteBundle/Resources/config/routing.yml"
+    prefix:   /Frite
+
+produits:
+    resource: "@ProduitsBundle/Resources/config/routing.yml"
+    prefix:   /Produits
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+panier:
+    resource: "@PanierBundle/Resources/config/routing.yml"
+    prefix:   /
+
+baskel:
+    resource: "@BaskelBundle/Resources/config/routing.yml"
+    prefix:   /Baskel
+
+ancarebeca_fullcalendar:
+    resource: "@FullCalendarBundle/Resources/config/routing.yml"
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+

@@ -1,0 +1,38 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    encoders:
+        AppBundle\Entity\User: bcrypt #a  reviser
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            # activate different ways to authenticate
+            logout:
+                path:   /logout
+                target: /login
+            remember_me:
+                secret: '%secret%'
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_USER }
+        - { path: ^/Valider, role: ROLE_USER }
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLES_ADMIN }
+        - { path: ^/client/, role: ROLES_USER }
+        - { path: ^/livreur/, role: ROLE_LIVREUR }
+        - { path: ^/Frite/reclamation, role: ROLE_USER }
+        - { path: ^/Frite/reclamation, role: ROLE_USER }
+        - { path: ^/CountPanier, role: ROLE_USER }
