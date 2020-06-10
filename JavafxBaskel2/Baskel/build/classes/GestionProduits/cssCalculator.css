@@ -1,0 +1,44 @@
+.btnNumbers{
+    -fx-background-color:  #02030A;
+}
+
+.btnNumbers:hover{
+    -fx-background-color: #1b1c22;
+
+}
+
+
+.btnNumbers:pressed{
+    -fx-background-color: #02030A;
+}
+
+
+.btnoperators{
+    -fx-background-color:   #353F59;
+}
+
+.btnoperators:hover{
+    -fx-background-color: #495269;
+
+}
+
+
+.btnoperators:pressed{
+    -fx-background-color: #353F59;
+}
+
+
+.btnEqual{
+    -fx-background-color:    #a868a0;
+}
+
+.btnEqual:hover{
+    -fx-background-color: #432940;
+
+}
+
+
+.btnEqual:pressed{
+    -fx-background-color:  #a868a0;
+}
+

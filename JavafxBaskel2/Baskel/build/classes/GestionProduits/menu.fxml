@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionProduits.MenuController">
+   <children>
+      <Pane fx:id="pnlOverview1" prefHeight="554.0" prefWidth="1218.0" style="-fx-background-color: #152036; -fx-border-color: #02030A;">
+         <children>
+            <Button fx:id="GoProduits" layoutX="473.0" layoutY="152.0" mnemonicParsing="false" onAction="#GoProduits" prefHeight="99.0" prefWidth="260.0" style="-fx-background-color: #1B2A47;" textFill="#f5f5f5">
+               <graphic>
+                  <ImageView fitHeight="74.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Gui/Front/resources/icon-bicycle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="GoCategories" layoutX="473.0" layoutY="312.0" mnemonicParsing="false" onAction="#GoCategories" prefHeight="99.0" prefWidth="260.0" style="-fx-background-color: #1B2A47;">
+               <graphic>
+                  <ImageView fitHeight="72.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Gui/Front/resources/layers-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="titre1" layoutX="567.0" layoutY="267.0" prefHeight="24.0" prefWidth="65.0" text="Produits" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Microsoft YaHei Light" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="titre2" layoutX="569.0" layoutY="429.0" prefHeight="24.0" prefWidth="75.0" text="Category " textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Microsoft YaHei Light" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

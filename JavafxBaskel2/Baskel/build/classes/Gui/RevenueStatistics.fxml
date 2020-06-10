@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RevenueStatisticsController">
+   <children>
+      <Pane layoutX="8.0" layoutY="9.0" prefHeight="876.0" prefWidth="967.0" style="-fx-background-color: #fff;">
+         <children>
+            <Separator layoutX="95.0" layoutY="94.0" prefHeight="0.0" prefWidth="763.0" />
+            <Label fx:id="idClient" layoutX="137.0" layoutY="149.0" prefHeight="19.0" prefWidth="114.0" textFill="#4d4c4c">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="Totale" layoutX="366.0" layoutY="149.0" prefHeight="19.0" prefWidth="101.0" textFill="#4d4c4c">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lEtativraison" layoutX="370.0" layoutY="223.0" prefHeight="19.0" prefWidth="124.0" textFill="#4d4c4c">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="etat" layoutX="137.0" layoutY="221.0" prefHeight="19.0" prefWidth="70.0" textFill="#4d4c4c">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="614.0" layoutY="34.0" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Separator layoutX="711.0" layoutY="13.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="0.0" />
+            <Label layoutX="725.0" layoutY="13.0" text="Date de Creation" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Day" layoutX="727.0" layoutY="35.0" prefHeight="53.0" prefWidth="44.0" text="23" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="Month" layoutX="774.0" layoutY="41.0" text="Month" textFill="#3a1c9d" />
+            <Label fx:id="year" layoutX="774.0" layoutY="59.0" prefHeight="21.0" prefWidth="44.0" text="year" textFill="#aeacac" />
+            <Label fx:id="ref" layoutX="202.0" layoutY="51.0" prefHeight="20.0" prefWidth="167.0" textFill="#b2b0b0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="79.0" fitWidth="89.0" layoutX="92.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="273.0" layoutY="7.0" prefHeight="83.0" prefWidth="322.0" text=" Statistiques " textFill="#3a1c9d">
+               <font>
+                  <Font size="56.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="pieChart" layoutX="92.0" layoutY="118.0" prefHeight="249.0" prefWidth="312.0" />
+            <AreaChart fx:id="ac" layoutX="53.0" layoutY="438.0" prefHeight="377.0" prefWidth="859.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </AreaChart>
+            <StackedBarChart fx:id="ProduitCharts" layoutX="389.0" layoutY="99.0" prefHeight="295.0" prefWidth="520.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </StackedBarChart>
+         </children>
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

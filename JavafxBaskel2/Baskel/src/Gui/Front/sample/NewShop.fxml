@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.NewShopController">
+   <children>
+      <AnchorPane layoutY="-5.0" prefHeight="697.0" prefWidth="1124.0" style="-fx-background-radius: 15 0 0 15;" styleClass="linear-grad" stylesheets="@Front/css/fullpackstyling.css">
+         <children>
+            <VBox prefHeight="544.0" prefWidth="74.0" style="-fx-background-color: #451b52; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane prefHeight="139.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15; -fx-background-color: #451b52;" />
+               </children>
+            </VBox>
+            <AnchorPane layoutX="118.0" layoutY="68.0" prefHeight="600.0" prefWidth="973.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" stylesheets="@Front/css/fullpackstyling.css">
+               <children>
+                  <BorderPane layoutX="73.0" layoutY="32.0" prefHeight="444.0" prefWidth="283.0">
+                     <top>
+                        <Label textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <left>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </left>
+                     <bottom>
+                        <Pane prefHeight="410.0" prefWidth="306.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane layoutX="-22.0" layoutY="84.0" prefHeight="357.0" prefWidth="291.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" styleClass="pane" stylesheets="@Front/css/fullpackstyling.css">
+                                 <children>
+                                    <ImageView fitHeight="139.0" fitWidth="142.0" layoutX="65.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../WebProjectSymfony/Baskel/web/front/images/product1.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="nom0" layoutX="87.0" layoutY="151.0" prefHeight="41.0" prefWidth="114.0" text="Baskla" textFill="#451b52">
+                                       <font>
+                                          <Font name="System Bold" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Prix0" layoutX="95.0" layoutY="192.0" prefHeight="37.0" prefWidth="38.0" text="200" textAlignment="JUSTIFY" textFill="#757070" wrapText="true">
+                                       <font>
+                                          <Font name="Candara Light" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Spinner fx:id="qte0" layoutX="101.0" layoutY="244.0" prefHeight="31.0" prefWidth="77.0" />
+                                    <Label layoutX="136.0" layoutY="197.0" prefHeight="31.0" prefWidth="28.0" text="DNT" textAlignment="JUSTIFY" textFill="#757070" wrapText="true">
+                                       <font>
+                                          <Font name="Candara Light" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="AjouterProduit0" layoutX="23.0" layoutY="304.0" mnemonicParsing="false" onAction="#AjouterProduit0" prefHeight="35.0" prefWidth="250.0" styleClass="button1" stylesheets="@Front/css/fullpackstyling.css" text="Ajouter" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </bottom>
+                  </BorderPane>
+                  <Pane layoutX="662.0" layoutY="152.0" prefHeight="357.0" prefWidth="283.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" styleClass="pane" stylesheets="@Front/css/fullpackstyling.css">
+                     <children>
+                        <Label fx:id="nom3" layoutX="80.0" layoutY="152.0" prefHeight="41.0" prefWidth="114.0" text="Baskla 3" textFill="#451b52">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="qte3" layoutX="86.0" layoutY="254.0" prefHeight="31.0" prefWidth="77.0" />
+                        <ImageView fitHeight="88.0" fitWidth="154.0" layoutX="59.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../WebProjectSymfony/Baskel/web/front/images/product3.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="Prix3" layoutX="99.0" layoutY="196.0" prefHeight="37.0" prefWidth="38.0" text="400" textAlignment="JUSTIFY" textFill="#757070" wrapText="true">
+                           <font>
+                              <Font name="Candara Light" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="140.0" layoutY="201.0" prefHeight="31.0" prefWidth="28.0" text="DNT" textAlignment="JUSTIFY" textFill="#757070" wrapText="true">
+                           <font>
+                              <Font name="Candara Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="17.0" layoutY="304.0" mnemonicParsing="false" onAction="#AjouterProduit3" prefHeight="35.0" prefWidth="250.0" styleClass="button1" stylesheets="@Front/css/fullpackstyling.css" text="Ajouter" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="368.0" layoutY="152.0" prefHeight="357.0" prefWidth="283.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" styleClass="pane" stylesheets="@Front/css/fullpackstyling.css">
+                     <children>
+                        <Label fx:id="nom2" layoutX="80.0" layoutY="151.0" prefHeight="41.0" prefWidth="114.0" text="Baskla 2" textFill="#451b52">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="qte2" layoutX="89.0" layoutY="248.0" prefHeight="31.0" prefWidth="77.0" />
+                        <ImageView fitHeight="88.0" fitWidth="154.0" layoutX="53.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../WebProjectSymfony/Baskel/web/front/images/product2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="Prix2" layoutX="94.0" layoutY="191.0" prefHeight="37.0" prefWidth="38.0" text="300" textAlignment="JUSTIFY" textFill="#757070" wrapText="true">
+                           <font>
+                              <Font name="Candara Light" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="135.0" layoutY="196.0" prefHeight="31.0" prefWidth="28.0" text="DNT" textAlignment="JUSTIFY" textFill="#757070" wrapText="true">
+                           <font>
+                              <Font name="Candara Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="15.0" layoutY="303.0" mnemonicParsing="false" onAction="#AjouterProduit2" prefHeight="35.0" prefWidth="250.0" styleClass="button1" stylesheets="@Front/css/fullpackstyling.css" text="Ajouter" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="lblDate" layoutX="610.0" layoutY="386.0" />
+                  <Label fx:id="lblDetails" layoutX="610.0" layoutY="549.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="134.0" layoutY="29.0" text="How can we help you ? " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="GoPanier" glyphName="SHOPPING_CART" layoutX="929.0" layoutY="49.0" onMousePressed="#GoPanier" size="30" />
+            <Label fx:id="NbrItems" layoutX="970.0" layoutY="28.0" text="0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

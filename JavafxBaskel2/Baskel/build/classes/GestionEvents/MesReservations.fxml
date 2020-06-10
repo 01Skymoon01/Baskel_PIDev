@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="1051.0" style="-fx-background-color: #ededed; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionEvents.Affichagereservations">
+   <children>
+      <Label layoutX="39.0" layoutY="81.0" text="Ici voous trouvez vos reservations" textFill="#511b1b">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="109.0" text="Confirm or cancel now" textFill="#181516">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="idTabRes" layoutX="30.0" layoutY="179.0" onMouseClicked="#ItemSelected" prefHeight="375.0" prefWidth="985.0" style="-fx-background-radius: 20;" styleClass="chart-plot-background" stylesheets="@../css/fullpackstyling.css">
+        <columns>
+            <TableColumn fx:id="idRes" prefWidth="133.0" text="ID" />
+          <TableColumn fx:id="Event" prefWidth="634.0" text="Event" />
+          <TableColumn fx:id="Etat" prefWidth="217.0" text="Etat" />
+        </columns>
+      </TableView>
+      <Label layoutX="86.0" layoutY="37.0" text="Vos reservations" textFill="#181516">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="Btnconf" layoutX="633.0" layoutY="572.0" mnemonicParsing="false" onAction="#Confirmer" prefHeight="37.0" prefWidth="136.0" style="-fx-background-color: black;" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="CONFIRMER" textFill="WHITE" />
+      <Button fx:id="BtnAnnul" layoutX="273.0" layoutY="572.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="37.0" prefWidth="136.0" style="-fx-background-color: black;" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="ANNULER" textFill="WHITE" />
+      <MaterialDesignIconView fx:id="MesReservations" glyphName="CONTACT_MAIL" layoutX="24.0" layoutY="67.0" size="45" style="-fx-fill: black;" text="" wrappingWidth="76.0" />
+   </children>
+</AnchorPane>

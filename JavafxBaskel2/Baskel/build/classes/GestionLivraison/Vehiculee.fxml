@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="1218.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionLivraison.AjoutVehiculeController">
+   <children>
+      <BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="1218.0">
+         <top>
+            <Pane fx:id="pnlOverview1" prefHeight="554.0" prefWidth="1210.0" style="-fx-background-color: #152036;" styleClass="linear-grad" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="recherche" layoutX="974.0" layoutY="24.0" prefHeight="27.0" prefWidth="183.0" promptText="Chercher" style="-fx-background-color: #152036; -fx-border-radius: 2em; -fx-border-color: grey; -fx-text-fill: white;" />
+                  <Label layoutX="138.0" layoutY="50.0" prefHeight="35.0" prefWidth="135.0" text="Vehicule:" textFill="#e7e5e5">
+                     <font>
+                        <Font name="MS Reference Specialty" size="25.0" />
+                     </font>
+                  </Label>
+                  <BorderPane layoutX="-37.0" layoutY="81.0" prefHeight="444.0" prefWidth="625.0">
+                     <center>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="mat" layoutX="198.0" layoutY="85.0" prefHeight="35.0" prefWidth="245.0" promptText="Matricule" />
+                                    <TextField fx:id="mar" layoutX="199.0" layoutY="152.0" prefHeight="35.0" prefWidth="245.0" promptText="Marque" />
+                                    <Button fx:id="btnajouter" layoutX="197.0" layoutY="376.0" mnemonicParsing="false" onAction="#ajouterVehicule" prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: green;" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Ajouter" textFill="WHITE" />
+                                    <ComboBox fx:id="type" layoutX="195.0" layoutY="217.0" prefHeight="37.0" prefWidth="252.0" promptText="Type" style="-fx-background-color: white;" styleClass="chart-pie" />
+                                    <ComboBox fx:id="liv" layoutX="195.0" layoutY="288.0" prefHeight="37.0" prefWidth="252.0" promptText="Type" style="-fx-background-color: white;" styleClass="chart-pie" />
+                                    <Label fx:id="matl" layoutX="197.0" layoutY="74.0" textFill="#f50000" />
+                                    <Label fx:id="marl" layoutX="197.0" layoutY="154.0" textFill="#f50000" />
+                                    <Label layoutX="208.0" layoutY="14.0" text="Ajouter Vehicule" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </StackPane>
+                     </center>
+                  </BorderPane>
+                  <Line endX="502.0" endY="152.0" startX="502.0" startY="512.0" stroke="WHITE" />
+                  <TableView fx:id="tabv" layoutX="565.0" layoutY="165.0" onMouseClicked="#ItemSelected" prefHeight="309.0" prefWidth="596.0" styleClass="chart-plot-background" stylesheets="@../css/fullpackstyling.css">
+                    <columns>
+                      <TableColumn fx:id="idv" prefWidth="49.0" text="ID" />
+                      <TableColumn fx:id="matv" prefWidth="110.4000244140625" text="Matircule" />
+                        <TableColumn fx:id="marv" prefWidth="120.0" text="Marque" />
+                        <TableColumn fx:id="typev" prefWidth="153.5999755859375" text="Type" />
+                        <TableColumn fx:id="idl" prefWidth="163.9998779296875" text="Livreur" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btnmodifer" layoutX="560.0" layoutY="495.0" mnemonicParsing="false" onAction="#modifierVehicule" prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #1B2A47;" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Modifier" textFill="WHITE" />
+                  <Button fx:id="btnsupprimer" layoutX="918.0" layoutY="495.0" mnemonicParsing="false" onAction="#SupprimerVehicule" prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: red;" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Supprimer" textFill="WHITE" />
+                  <Label layoutX="735.0" layoutY="66.0" text="Nombre Vehicule" textFill="#fffafa">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblnbrvehicule" layoutX="790.0" layoutY="108.0" text="Label" textFill="#fffdfd">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="83.0" fitWidth="125.0" layoutX="35.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Gui/Front/resources/bus-4-64.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

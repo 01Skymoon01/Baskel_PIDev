@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1051.0" style="-fx-background-radius: 15 0 0 15; -fx-background-color: #ededed;" styleClass="linear-grad" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionCommandeFront.ListeOfItemsController">
+   <children>
+      <ScrollPane layoutX="55.0" layoutY="150.0" prefHeight="354.0" prefWidth="969.0" style="-fx-background-color: none;" styleClass="mylistview" stylesheets="@../GestionShop/scrollbarCss.css">
+         <content>
+            <TilePane fx:id="tilePane" hgap="30.0" prefHeight="352.0" prefWidth="964.0" style="-fx-background-color: none;" vgap="30.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="76.0" layoutY="37.0" text="VOS COMMANDE!" textFill="#181516">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="158.0" layoutY="104.0" text="Refenrence" textFill="#181516">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="55.0" layoutY="145.0" opacity="0.45" prefHeight="2.0" prefWidth="969.0" />
+      <Label layoutX="577.0" layoutY="104.0" text="Quantite" textFill="#181516">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="426.0" layoutY="104.0" text="Total(DTN)" textFill="#181516">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="8.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Gui/Front/resources/commande.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

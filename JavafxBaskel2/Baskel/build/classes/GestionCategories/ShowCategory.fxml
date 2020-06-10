@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionCategories.ShowCategoryController">
+   <children>
+      <StackPane prefHeight="576.0" prefWidth="1211.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane fx:id="showcatpanel" prefHeight="583.0" prefWidth="1211.0" style="-fx-background-color: #152036;">
+               <children>
+                  <TableView fx:id="tableCategorie" layoutX="32.0" layoutY="190.0" prefHeight="299.0" prefWidth="1139.0" stylesheets="@styleTableView.css">
+                     <columns>
+                        <TableColumn fx:id="ref_c" prefWidth="406.0" text="Référence " />
+                        <TableColumn fx:id="libelle" minWidth="0.0" prefWidth="729.0" text="Libelle" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnRemove" layoutX="179.0" layoutY="123.0" mnemonicParsing="false" onAction="#removeCat" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: #1B2A47;" text="Supprimer" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="13" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textUpdate" layoutX="911.0" layoutY="26.0" prefHeight="35.0" prefWidth="183.0" promptText="Recherche" style="-fx-background-color: #152036; -fx-border-color: #B7C3D7; -fx-border-radius: 2em; -fx-text-fill: white;" stylesheets="@../Home/style.css">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updateBtn" layoutX="876.0" layoutY="145.0" mnemonicParsing="false" onAction="#updateCat" style="-fx-background-color: #1B2A47;" text="Modifier" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="13" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnAddCat" layoutX="35.0" layoutY="124.0" mnemonicParsing="false" onAction="#AddCategory" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: #1B2A47;" text="Categorie" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="13" />
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="textUpdate1" layoutX="988.0" layoutY="146.0" prefHeight="35.0" prefWidth="183.0" promptText="Recherche" style="-fx-background-color: #152036; -fx-border-color: #B7C3D7; -fx-border-radius: 2em; -fx-text-fill: white;" stylesheets="@../Home/style.css" text="Nouvelle libelle">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="1218.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ClientController">
+   <children>
+      <Pane fx:id="pnlOverview1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="1218.0" style="-fx-background-color: #152036; -fx-border-color: #02030A;">
+         <children>
+            <TextField fx:id="Recherche" layoutX="974.0" layoutY="25.0" prefHeight="27.0" prefWidth="183.0" promptText="Chercher" style="-fx-background-color: #152036; -fx-border-color: #B7C3D7; -fx-border-radius: 2em; -fx-text-fill: white;" />
+            <TableView fx:id="Userlist" layoutX="42.0" layoutY="109.0" prefHeight="344.0" prefWidth="1134.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="username" prefWidth="177.0" text="nom d'utilisateur" />
+                  <TableColumn fx:id="cin" prefWidth="199.0" text="cin" />
+                  <TableColumn fx:id="email" prefWidth="279.0" text="email" />
+                  <TableColumn fx:id="mdp" prefWidth="403.0" text="mot de passe" />
+              </columns>
+            </TableView>
+            <HBox layoutX="162.0" layoutY="479.0" prefHeight="53.0" prefWidth="908.0" spacing="90.0">
+               <children>
+                  <Button fx:id="supprimerbtn" mnemonicParsing="false" onAction="#supprimerb" prefHeight="35.0" prefWidth="151.0" style="-fx-background-color: #BF0000;" styleClass="blue-btn" stylesheets="@com/xemacscode/styles.css" text="Supprimer compte" />
+                  <Button fx:id="modifierbtn" mnemonicParsing="false" onAction="#modifierb" prefHeight="35.0" prefWidth="145.0" styleClass="blue-btn" text="Modifier compte">
+                     <stylesheets>
+                        <URL value="@style.css" />
+                        <URL value="@com/xemacscode/styles.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button fx:id="activer" mnemonicParsing="false" onAction="#activerCompte" prefHeight="35.0" prefWidth="158.0" style="-fx-background-color: #08f263;" styleClass="blue-btn" text="Activer Compte">
+                     <stylesheets>
+                        <URL value="@style.css" />
+                        <URL value="@com/xemacscode/styles.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button fx:id="desactiver" mnemonicParsing="false" onAction="#desactiverCompte" prefHeight="35.0" prefWidth="158.0" style="-fx-background-color: #BF0000;" styleClass="blue-btn" text="Desactiver Compte">
+                     <stylesheets>
+                        <URL value="@style.css" />
+                        <URL value="@com/xemacscode/styles.css" />
+                     </stylesheets>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
